@@ -25,12 +25,13 @@ public class AttackMove {
         }
         return valid;
     }
-    public int preformAttack(int attackModifier){
+    public int preformAttack(double attackModifier){
         int damage;
         Random random = new Random();
         damage = random.nextInt(minDamage, maxDamage);
+        damage *= attackModifier;
         //TODO
-        return damage * attackModifier;
+        return damage;
     }
     public int getApCost(){
         return this.apCost;

@@ -12,5 +12,15 @@ public abstract class FirePokemon extends Pokemon{
            this.takeDamage(randomLoseOfLifePoints);
         }
     }
+    public int specialFireAttack(){
+        AttackMove[] attackMoves = this.getAttackMoves();
+        Random random = new Random();
+        int firstAttack = random.nextInt(attackMoves.length);
+        int secondAttack = random.nextInt(attackMoves.length);
+        int damage = attackMoves[firstAttack].preformAttack(this.getAttackModifier());
+        damage += attackMoves[secondAttack].preformAttack(this.getAttackModifier());
+        return damage;
+    }
+
 
 }
