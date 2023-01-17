@@ -3,8 +3,12 @@ public abstract class Pokemon {
     private int attackPoints;
     private int level;
     private AttackMove[] attackMoves;
-    private double attackModifier;
 
+     private double attackModifier;
+
+    public double getAttackModifier() {
+        return attackModifier;
+    }
     public Pokemon(int lifePoints, int attackPoints, AttackMove attackMove){
         this.lifePoints = lifePoints;
         this.attackPoints = ((3 * attackPoints)/ 4);
@@ -44,5 +48,18 @@ public abstract class Pokemon {
     protected int getLevel(){
         return this.level;
     }
-}
+
+    protected void addAttack(AttackMove attackMove){
+        AttackMove[] updatedAttackMoves = new AttackMove[this.attackMoves.length + 1];
+        for (int i = 0; i < this.attackMoves.length; i++){
+            updatedAttackMoves[i] = this.attackMoves[i];
+        }
+        updatedAttackMoves[this.attackMoves.length] = attackMove;
+        this.attackMoves = updatedAttackMoves;
+    }
+    protected AttackMove[] getAttackMoves(){
+        return this.attackMoves;
+    }
+    }
+
 
