@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public abstract class FirePokemon extends Pokemon{
-    public FirePokemon(int lifePoints, int attackPoints){
-        super(lifePoints,attackPoints);
+    public FirePokemon(int lifePoints, int attackPoints, AttackMove attackMove){
+        super(lifePoints, attackPoints, attackMove);
     }
     public void fireAdditionalEffect(){
         Random random = new Random();

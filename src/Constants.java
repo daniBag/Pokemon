@@ -1,5 +1,6 @@
 public class Constants {
     public static final int KICK_ATTACK_DAMAGE = 2;
+    public static final int INVALID = -1;
     public static final int INITIALIZING_LEVEL = 1;
     public static final int PERCENTAGE_MIN_RANDOM = 1;
     public static final int PERCENTAGE_MAX_RANDOM = 100;
@@ -8,6 +9,9 @@ public class Constants {
     public static final int FIRE_EFFECT_MAX_DAMAGE = 10;
     public static final double TRIPLE_ATTACK_POWER_BONUS = 3.0;
     public static final int CHARMANDER_MAX_HP = 80;
+    public static final int EVOLUTION_CHARMANDER_LEVEL = 1;
+    public static final int EVOLUTION_CHARMELEON_LEVEL = 2;
+    public static final int EVOLUTION_CHARIZARD_LEVEL = 3;
     public static final int CHARMANDER_MAX_AP = 40;
     public static final int CHARMELEON_MAX_HP = 90;
     public static final int CHARMELEON_MAX_AP = 60;
@@ -33,5 +37,6 @@ public class Constants {
     public static final int ELECTABUZZ_MAX_AP = 100;
     public static final int ELECTIVIRE_MAX_HP = 35;
     public static final int ELECTIVIRE_MAX_AP = 120;
+    public static final AttackMove KICK = new AttackMove("Kick", 0, 2, 3);
 
 }

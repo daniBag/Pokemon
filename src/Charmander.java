@@ -1,17 +1,22 @@
 public class Charmander extends FirePokemon implements Evolution{
 
-    public Charmander() {
-        super(Constants.CHARMANDER_MAX_HP, Constants.CHARMANDER_MAX_AP);
+    public Charmander(AttackMove attackMove) {
+        super(Constants.CHARMANDER_MAX_HP, Constants.CHARMANDER_MAX_AP, attackMove);
     }
 
 
-    public String kickAttack() {
+    /*public String kickAttack() {
         return null;
-    }
+    }*/
 
-    @Override
-    protected void addHp(int hp) {
-
+    protected int getMaxHP(){
+        int max = Constants.INVALID;
+        switch (this.getLevel()){
+            case Constants.EVOLUTION_CHARMANDER_LEVEL -> max = Constants.CHARMANDER_MAX_HP;
+            case Constants.EVOLUTION_CHARMELEON_LEVEL -> max = Constants.CHARMELEON_MAX_HP;
+            case Constants.EVOLUTION_CHARIZARD_LEVEL -> max = Constants.CHARIZARD_MAX_HP;
+        }
+        return max;
     }
 
     @Override
