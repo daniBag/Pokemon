@@ -1,5 +1,7 @@
 public class Constants {
     public static final int KICK_ATTACK_DAMAGE = 2;
+    public static final String ELECTRIC_TYPE = "Electric";
+    public static final String FIRE_TYPE = "Fire";
     public static final int INVALID = -1;
     public static final int INITIALIZING_LEVEL = 1;
     public static final int PERCENTAGE_MIN_RANDOM = 1;
